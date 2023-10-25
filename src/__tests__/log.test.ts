@@ -25,6 +25,7 @@ describe('testing logger', () => {
     it('should save last 50 logs', () => {
         startLogging();
         console.log(LoggerConfig.last50logs);
+        expect(LoggerConfig.last50logs.some(v => v.includes('[90'))).toBeFalsy();
     });
 
     it('should print objects correctly', () => {

@@ -1,8 +1,9 @@
 import { ILogHandler, ILogLevel } from 'js-logger';
-import { LoggerConfig } from './loggerConfig';
+
 import { formattedDate } from '../formatters/formattedDate';
-import { withColor } from '../styles';
 import { formattedInArrows } from '../formatters/formattedInArrows';
+import { withColor } from '../styles';
+import { LoggerConfig } from './loggerConfig';
 
 export const getFormattedMessage = (messages: any[], context: any, clear: boolean): string => {
     const time = formattedDate(new Date(), clear);
@@ -34,7 +35,7 @@ export const processMessageWithFormat: ILogHandler = (messages, context) => {
     }
 };
 
-function formatLevel(level: ILogLevel, clear: boolean = false) {
+function formatLevel(level: ILogLevel, clear = false) {
     switch (level.name) {
         case 'LOG':
             return withColor('LOG', 'gray', clear);

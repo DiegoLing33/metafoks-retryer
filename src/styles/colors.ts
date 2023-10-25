@@ -55,7 +55,7 @@ export function withStyle(value: string, style: number[]) {
     return `\u001B[${style[0]}m` + value + `\u001B[${style[1]}m`;
 }
 
-export function withColor(value: string, color: keyof typeof styles, clear: boolean = false) {
+export function withColor(value: string, color: keyof typeof styles, clear = false) {
     if (clear) return value;
     return withStyle(value, styles[color]);
 }

@@ -1,6 +1,7 @@
 import JSLogger from 'js-logger';
-import { getFormattedMessage, processMessageWithFormat } from './transports';
+
 import { ColorKey } from '../styles';
+import { getFormattedMessage, processMessageWithFormat } from './transports';
 
 export const LoggerConfig = {
     web: false,

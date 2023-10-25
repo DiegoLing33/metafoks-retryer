@@ -1,4 +1,5 @@
 import { ILogger } from 'js-logger';
+
 import { ColorKey } from '../styles';
 import { LoggerConfig } from './loggerConfig';
 
