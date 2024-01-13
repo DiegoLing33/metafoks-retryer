@@ -1,25 +1,25 @@
 {
-  "name": "@redeco-app/logger",
+  "name": "@metafoks/retryer",
   "scripts": {
-    "artifactregistry-login": "npx google-artifactregistry-auth",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.(js|ts)\"",
     "lint": "eslint src --fix --ext .js,.ts",
     "test": "jest --config jest.config.js"
   },
   "dependencies": {
-    "js-logger": "^1.6.1"
+    "log4js": "6.9.1",
+    "p-retry": "^6.2.0"
   },
   "devDependencies": {
-    "@redeco-platform/eslint-config": "^0.0.5",
-    "@redeco-platform/prettier": "^1.0.0",
+    "@metafoks/eslint-config": "^1.0.0",
+    "@metafoks/prettier": "^1.0.0",
     "@types/jest": "29.4.0",
     "@typescript-eslint/eslint-plugin": "5.54.0",
     "@typescript-eslint/parser": "5.52.0",
     "eslint": "8.35.0",
     "eslint-plugin-jest": "27.2.1",
     "jest": "29.4.3",
-    "prettier": "2.8.4",
+    "prettier": "^3.2.1",
     "ts-jest": "29.0.5",
     "typescript": "4.9.5"
   },
@@ -27,14 +27,14 @@
   "files": [
     "lib"
   ],
-  "version": "1.1.1",
+  "version": "1.0.0",
   "publishConfig": {
     "access": "public"
   },
-  "prettier": "@redeco-platform/prettier",
+  "prettier": "@metafoks/prettier",
   "eslintConfig": {
     "extends": [
-      "@redeco-platform/eslint-config"
+      "@metafoks/eslint-config"
     ]
   },
   "jest": {
