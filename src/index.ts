@@ -8,7 +8,7 @@ export function withRetryer<T>(
     func: (attempt: number) => PromiseLike<T> | T,
     options: Options = { retries: 2 },
 ) {
-    const logger = getLogger('Retryer');
+    const logger = getLogger(`retryer-${name}`);
     logger.level = 'DEBUG';
 
     return pRetry(
